@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<link rel="stylesheet" href="css/pptweb.css">
+	</head>
+	<body style="background-color: #333;" onload="load()">
+		<div class="moveDiv" id="move">
+			<div class="PPTpage" style="background-color: #369;">
+				<div class="center_block">
+					<h1 class="">First Page</h1>
+					<p class="">Failure is probably the fortification in your pole. It is like a peek your wallet as the thief, when you are thinking how to spend several hard-won lepta, when you are wondering whether new money, it has laid background. Because of you, then at the heart of the most lax, alert, and most low awareness, and left it godsend failed.</p>
+				</div>
+			</div>
+			<div class="PPTpage" style="background-color: #69C;">
+				<div class="center_block">
+					<h1 class="">Second Page</h1>
+					<p class="">Success and failure is and walkers. When you experience the enjoyment of victory, success and failure in the far away from you hide the corner, or wait in the waiting outside, you consider it. Therefore, when one victory, enjoying the mood of the holiday, the more times, when the attack is over failure. The former, the latter more lax degree will succeed.</p>
+				</div>
+			</div>
+			<div class="PPTpage" style="background-color: #6CF;">
+				<div class="center_block">
+					<h1 class="">Third Page</h1>
+					<p class="">To climb up from the failure is difficult to climb up, and the power of the size is. Power comes from the failure on the judgment, is a small, can immediately return to, Or a devastating blow, it seems inevitable? Two types of power failures brought huge difference is.</p>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/mjz.js"></script>
+	<script src="js/ppt.js"></script>
+	<script>
+		var num = document.querySelectorAll('.PPTpage').length;
+		var pptWeb = new ppt(num, 1);
+		var move = document.getElementById('move');
+		move.style['width'] = num*100+'%';
+		var p = 100/num;
+		console.log(p);
+		MjFn('.PPTpage').css('width', p+'%');
+		function load() {
+			pptWeb.addWord();
+		}
+	</script>
+</html>
