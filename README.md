@@ -8,12 +8,14 @@
 mjz.js<br>
 ppt.js
 
+![WEB PPT](https://github.com/merjiezo/pptweb/raw/master/page.gif)
+
 一页ppt引入css: PPTpage<br>
 暂时必须引入居中代码：center_block<br>
 暂时书写了两个样式：h1  /  p
 
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 	<head>
