@@ -109,6 +109,17 @@ if (!MjFn) MjFn = { };
 			}
 		},
 
+		//let it become the children
+		children: function(num) {
+			var length = this.els.length;
+			if (num <= length) {
+				this.els = this.els[num-1].children;
+				return this;
+			} else {
+				this.debug('error101', 'children');
+			}
+		},
+
 		removeClass: function(val) {
 			this.each(function(el) {
 				var str = el.attributes.class.value.replace(/\s/g,' '),

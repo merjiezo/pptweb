@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Web PPT</title>
+		<link rel="stylesheet" href="css/pptweb.css">
+	</head>
+	<body onload="load()">
+		<div class="moveDiv" id="move">
+			<div class="PPTpage">
+				<div class="circle">
+					<div class="center_block">
+						<h1 class="">The future of PPT</h1>
+						<p class="">Web PPT, It's amazing, isn't it?Just for the people who wanna change the world.<br>Let me introduce how to use it.</p>
+					</div>
+				</div>
+			</div>
+			<div class="PPTpage">
+				<div class="circle" style="background-color: #666;">
+					<div class="center_block">
+						<h1 class="">First start</h1>
+						<p class="">The main file is:&nbsp&nbsp&nbsp&nbsp pptweb.css | mjz.js | ppt.js<br>Now this framework only support: IE9+ | chrome | safari<br>And first you ganna have an div, class="moveDiv", id="move"<br>Then one page's class is PPTpage,this is only the start! Now is the amazing part:This framework can calculate the number of PPTpage, it can change width by itself.</p>
+					</div>
+				</div>
+			</div>
+			<div class="PPTpage">
+				<div class="circle" style="background-color: #999;">
+					<div class="center_block">
+						<h1 class="">Then</h1>
+						<p class="">If there is a page full of picture, you can use class: imgPPT_two, as you can see, this framework only support two picture in it, and cannot allow the user to change, but in the future it can be change.The next page is going to introduce the picture show ></p>
+					</div>
+				</div>
+			</div>
+			<div class="PPTpage">
+				<div class="circle" style="background-color: #999;">
+					<div class="center_block">
+						<div class="imgPPT_two" style="background-image: url(imgs/img4.png);"></div>
+						<div class="imgPPT_two" style="background-image: url(imgs/img3.jpg);"></div>
+					</div>
+				</div>
+			</div>
+			<div class="PPTpage">
+				<div class="circle" style="background-color: #999;">
+					<div class="center_block">
+						<h1 class="">It's cool, isn't it?</h1>
+						<p class="">Created by Merjiezo<br>A full Stark developer<br>E-mail: 535381437@qq.com<br>Thank you!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/mjz.js"></script>
+	<script src="js/ppt.js"></script>
+	<script>
+		var num = document.querySelectorAll('.PPTpage').length;
+		var pptWeb = new ppt(num, 1);
+		var move = document.getElementById('move');
+		move.style['width'] = num*100+'%';
+		var p = 100/num;
+		MjFn('.PPTpage').css('width', p+'%');
+		function load() {
+			pptWeb.addWord();
+		}
+		document.addEventListener('keydown', function(e) {
+			if (e.keyIdentifier == 'Left' || e.keyIdentifier == 'Up') {
+				pptWeb.beforeScal();
+			}
+			if (e.keyIdentifier == 'Right' || e.keyIdentifier == 'Down') {
+				pptWeb.nextScal();
+			}
+		});
+	</script>
+</html>

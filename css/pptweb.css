@@ -1,3 +1,20 @@
+/*
+ * Framework Created By merjiezo
+ * Copyright 2016, 2016 MjFn Foundation, Inc.
+ * Framework version: 0.1.0
+ * Remind to the user: 
+ *	1.only used in font, not in node.js
+ * Date: 2016-05-02 10:51
+ *
+ * This is the css of web ppt
+ * I read lots of framework, all framework only have css
+ * or only have the javascript code
+ * why not we have both of it.
+ * css have the advantage that js don't have
+ * js too.
+ * So, my framework not only have js,It have both! and I love Coding
+ * 
+ */
 @font-face {
 	font-family: 'PingHei';
 	src: url(../font/PingHei/PingHei-light.ttf);
@@ -18,18 +35,63 @@ p { line-height: 30px; font-size: 25px; }
 	float: left;
 }
 
-.center_block > h1, .center_block > p { opacity: 0; transform: translateX(-30px); }
+.center_block > h1, .center_block > p, .center_block > div { opacity: 0; transform: translateX(-30px); }
 
 .center_block > h1 { -webkit-transition:opacity .7s .7s ease-in-out; }
 
 .center_block > p { -webkit-transition:opacity .7s 1.4s ease-in-out; }
 
+.center_block > div { -webkit-transition:opacity .7s .7s ease-in-out; }
+
 .rightPo { opacity: 1 !important; }
+
+.center_block, .circle { text-align: left; position: relative; margin: 0 auto;  }
 
 .center_block {
 	margin: 0 20%;
-	text-align: left;
-	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
+}
+.circle {
+	width: 100%;
+	height: 550px;
+	background-color: #333;
+	overflow: hidden;
+}
+
+/*
+ * the scale animation in css
+ * first add the class,using mjz.js
+ * which created by merjiezo
+ */
+.scaleChange {
+	-webkit-animation: chainScale 1.4s ease-in-out 0s 1 normal;
+	-o-animation: chainScale 1.4s ease-in-out 0s 1 normal;
+	animation: chainScale 1.4s ease-in-out 0s 1 normal;
+}
+@keyframes chainScale {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(0.5);
+		-webkit-filter: blur(5px);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+
+}
+
+.imgPPT_two {
+	display: inline-block;
+	margin: 10%;
+	position: relative;
+	width: 220px;
+	height: 220px;
+	background-size: cover;
+	background-position: 50%;
+	background-repeat: no-repeat;
 }

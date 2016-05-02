@@ -2,15 +2,15 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Document</title>
+		<title>Web PPT</title>
 		<link rel="stylesheet" href="css/pptweb.css">
 	</head>
 	<body style="background-color: #333;" onload="load()">
 		<div class="moveDiv" id="move">
 			<div class="PPTpage" style="background-color: #369;">
 				<div class="center_block">
-					<h1 class="">First Page</h1>
-					<p class="">Failure is probably the fortification in your pole. It is like a peek your wallet as the thief, when you are thinking how to spend several hard-won lepta, when you are wondering whether new money, it has laid background. Because of you, then at the heart of the most lax, alert, and most low awareness, and left it godsend failed.</p>
+					<h1 class="">The future of PPT</h1>
+					<p class="">Web PPT, It's amazing, isn't it?Just for the people who wanna change the world.</p>
 				</div>
 			</div>
 			<div class="PPTpage" style="background-color: #69C;">
@@ -40,5 +40,13 @@
 		function load() {
 			pptWeb.addWord();
 		}
+		document.addEventListener('keydown', function(e) {
+			if (e.keyIdentifier == 'Left' || e.keyIdentifier == 'Up') {
+				pptWeb.before();
+			}
+			if (e.keyIdentifier == 'Right' || e.keyIdentifier == 'Down') {
+				pptWeb.next();
+			}
+		});
 	</script>
 </html>
