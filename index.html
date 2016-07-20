@@ -1,87 +1,73 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Pptweb by merjiezo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Pptweb</h1>
-      <h2 class="project-tagline">ppt using HTML</h2>
-      <a href="https://github.com/merjiezo/pptweb" class="btn">View on GitHub</a>
-      <a href="https://github.com/merjiezo/pptweb/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/merjiezo/pptweb/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
-
-    <section class="main-content">
-      <h2>
-<a id="当ppt遇到网络程序员会怎么办" class="anchor" href="#%E5%BD%93ppt%E9%81%87%E5%88%B0%E7%BD%91%E7%BB%9C%E7%A8%8B%E5%BA%8F%E5%91%98%E4%BC%9A%E6%80%8E%E4%B9%88%E5%8A%9E" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>当PPT遇到网络程序员，会怎么办？</h2>
-
-<blockquote>
-<p>当然就诞生了 Web PPT 了！</p>
-
-<hr>
-</blockquote>
-
-<p>目前还不支持图片显示，首先先需要引入三个核心文``件：</p>
-
-<blockquote>
-<p>pptweb.css<br>
-mjz.js<br>
-ppt.js</p>
-</blockquote>
-
-<p><img src="https://github.com/merjiezo/pptweb/raw/master/page.gif" alt="WEB PPT"></p>
-
-<p>一页ppt引入css: PPTpage<br>
-暂时必须引入居中代码：center_block<br>
-暂时书写了两个样式：h1  /  p</p>
-
-<div class="highlight highlight-text-html-basic"><pre>&lt;!DOCTYPE html&gt;
-&lt;<span class="pl-ent">html</span> <span class="pl-e">lang</span>=<span class="pl-s"><span class="pl-pds">"</span>en<span class="pl-pds">"</span></span>&gt;
-    &lt;<span class="pl-ent">head</span>&gt;
-        &lt;<span class="pl-ent">meta</span> <span class="pl-e">charset</span>=<span class="pl-s"><span class="pl-pds">"</span>UTF-8<span class="pl-pds">"</span></span>&gt;
-        &lt;<span class="pl-ent">title</span>&gt;Document&lt;/<span class="pl-ent">title</span>&gt;
-        &lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>css/pptweb.css<span class="pl-pds">"</span></span>&gt;
-    &lt;/<span class="pl-ent">head</span>&gt;
-    &lt;<span class="pl-ent">body</span> <span class="pl-e">style</span>=<span class="pl-s"><span class="pl-pds">"</span>background-color: #333;<span class="pl-pds">"</span></span> <span class="pl-e">onload</span>=<span class="pl-s"><span class="pl-pds">"</span>load()<span class="pl-pds">"</span></span>&gt;
-        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>moveDiv<span class="pl-pds">"</span></span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>move<span class="pl-pds">"</span></span>&gt;
-            &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>PPTpage<span class="pl-pds">"</span></span> <span class="pl-e">style</span>=<span class="pl-s"><span class="pl-pds">"</span>background-color: #369;<span class="pl-pds">"</span></span>&gt;
-                &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>center_block<span class="pl-pds">"</span></span>&gt;
-                    &lt;<span class="pl-ent">h1</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>&gt;First Page&lt;/<span class="pl-ent">h1</span>&gt;
-                    &lt;<span class="pl-ent">p</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>&gt;This is the first page of Web PPT&lt;/<span class="pl-ent">p</span>&gt;
-                &lt;/<span class="pl-ent">div</span>&gt;
-            &lt;/<span class="pl-ent">div</span>&gt;
-    &lt;/<span class="pl-ent">body</span>&gt;
-<span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>js/mjz.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
-<span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>js/ppt.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
-<span class="pl-s1">    &lt;<span class="pl-ent">script</span>&gt;</span>
-<span class="pl-s1">        <span class="pl-k">var</span> num <span class="pl-k">=</span> <span class="pl-c1">document</span>.<span class="pl-en">querySelectorAll</span>(<span class="pl-s"><span class="pl-pds">'</span>.PPTpage<span class="pl-pds">'</span></span>).<span class="pl-c1">length</span>;</span>
-<span class="pl-s1">        <span class="pl-k">var</span> pptWeb <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">ppt</span>(num, <span class="pl-c1">1</span>);</span>
-<span class="pl-s1">        <span class="pl-k">var</span> move <span class="pl-k">=</span> <span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">'</span>move<span class="pl-pds">'</span></span>);</span>
-<span class="pl-s1">        <span class="pl-smi">move</span>.<span class="pl-c1">style</span>[<span class="pl-s"><span class="pl-pds">'</span>width<span class="pl-pds">'</span></span>] <span class="pl-k">=</span> num<span class="pl-k">*</span><span class="pl-c1">100</span><span class="pl-k">+</span><span class="pl-s"><span class="pl-pds">'</span>%<span class="pl-pds">'</span></span>;</span>
-<span class="pl-s1">        <span class="pl-k">var</span> p <span class="pl-k">=</span> <span class="pl-c1">100</span><span class="pl-k">/</span>num;</span>
-<span class="pl-s1">        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(p);</span>
-<span class="pl-s1">        <span class="pl-en">MjFn</span>(<span class="pl-s"><span class="pl-pds">'</span>.PPTpage<span class="pl-pds">'</span></span>).<span class="pl-en">css</span>(<span class="pl-s"><span class="pl-pds">'</span>width<span class="pl-pds">'</span></span>, p<span class="pl-k">+</span><span class="pl-s"><span class="pl-pds">'</span>%<span class="pl-pds">'</span></span>);</span>
-<span class="pl-s1">        <span class="pl-k">function</span> <span class="pl-en">load</span>() {</span>
-<span class="pl-s1">            <span class="pl-smi">pptWeb</span>.<span class="pl-en">addWord</span>();</span>
-<span class="pl-s1">        }</span>
-<span class="pl-s1">    &lt;/<span class="pl-ent">script</span>&gt;</span>
-&lt;/<span class="pl-ent">html</span>&gt;</pre></div>
-
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/merjiezo/pptweb">Pptweb</a> is maintained by <a href="https://github.com/merjiezo">merjiezo</a>.</span>
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
-    </section>
-
-  
-  </body>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Web PPT</title>
+		<link rel="stylesheet" href="css/pptweb.css">
+	</head>
+	<body onload="load()">
+		<div class="moveDiv" id="move">
+			<div class="PPTpage">
+				<div class="circle">
+					<div class="center_block">
+						<h1 class="">The future of PPT</h1>
+						<p class="">Web PPT, It's amazing, isn't it?Just for the people who wanna change the world.<br>Let me introduce how to use it.</p>
+					</div>
+				</div>
+			</div>
+			<div class="PPTpage">
+				<div class="circle" style="background-color: #666;">
+					<div class="center_block">
+						<h1 class="">First start</h1>
+						<p class="">The main file is:&nbsp&nbsp&nbsp&nbsp pptweb.css | mjz.js | ppt.js<br>Now this framework only support: IE9+ | chrome | safari<br>And first you ganna have an div, class="moveDiv", id="move"<br>Then one page's class is PPTpage,this is only the start! Now is the amazing part:This framework can calculate the number of PPTpage, it can change width by itself.</p>
+					</div>
+				</div>
+			</div>
+			<div class="PPTpage">
+				<div class="circle" style="background-color: #999;">
+					<div class="center_block">
+						<h1 class="">Then</h1>
+						<p class="">If there is a page full of picture, you can use class: imgPPT_two, as you can see, this framework only support two picture in it, and cannot allow the user to change, but in the future it can be change.The next page is going to introduce the picture show ></p>
+					</div>
+				</div>
+			</div>
+			<div class="PPTpage">
+				<div class="circle" style="background-color: #999;">
+					<div class="center_block">
+						<div class="imgPPT_two" style="background-image: url(imgs/img4.png);"></div>
+						<div class="imgPPT_two" style="background-image: url(imgs/img3.jpg);"></div>
+					</div>
+				</div>
+			</div>
+			<div class="PPTpage">
+				<div class="circle" style="background-color: #999;">
+					<div class="center_block">
+						<h1 class="">It's cool, isn't it?</h1>
+						<p class="">Created by Merjiezo<br>A full Stark developer<br>E-mail: 535381437@qq.com<br>Thank you!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/mjz.js"></script>
+	<script src="js/ppt.js"></script>
+	<script>
+		var num = document.querySelectorAll('.PPTpage').length;
+		var pptWeb = new ppt(num, 1);
+		var move = document.getElementById('move');
+		move.style['width'] = num*100+'%';
+		var p = 100/num;
+		MjFn('.PPTpage').css('width', p+'%');
+		function load() {
+			pptWeb.addWord();
+		}
+		document.addEventListener('keydown', function(e) {
+			if (e.keyIdentifier == 'Left' || e.keyIdentifier == 'Up') {
+				pptWeb.beforeScal();
+			}
+			if (e.keyIdentifier == 'Right' || e.keyIdentifier == 'Down') {
+				pptWeb.nextScal();
+			}
+		});
+	</script>
 </html>
