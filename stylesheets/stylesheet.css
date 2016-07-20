@@ -92,6 +92,6 @@ p { line-height: 30px; font-size: 25px; }
 	width: 220px;
 	height: 220px;
 	background-size: cover;
-	background-position: 50%;
+	background-position: 90% 50%;
 	background-repeat: no-repeat;
 }
