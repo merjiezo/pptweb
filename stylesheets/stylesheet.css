@@ -20,7 +20,7 @@
 	src: url(../font/PingHei/PingHei-light.ttf);
 }
 html, body { margin: 0px; height: 100%; width: 100%; overflow: hidden; font-family: 'lucida grande'; color: #EEE;}
-h1, h2, h3, h4, h5, h6 { margin: 0px; font-family: 'PingHei'; font-size: 5em;}
+h1, h2, h3, h4, h5, h6 { margin: 0px; font-family: 'lucida grande'; font-size: 5em;}
 p { line-height: 30px; font-size: 25px; }
 
 .moveDiv { height: 100%; position: relative; -webkit-transition: all 0.7s ease-in-out;}
